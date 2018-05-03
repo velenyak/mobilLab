@@ -1,6 +1,7 @@
 package com.bme.janosvelenyak.mobillab;
 
 import com.bme.janosvelenyak.mobillab.interactor.InteractorModule;
+import com.bme.janosvelenyak.mobillab.interactor.main.MainInteractor;
 import com.bme.janosvelenyak.mobillab.network.NetworkModule;
 import com.bme.janosvelenyak.mobillab.ui.UIModule;
 import com.bme.janosvelenyak.mobillab.ui.main.MainActivity;
@@ -20,6 +21,5 @@ import dagger.Component;
 public interface GiphyApplicationComponent {
     void inject(MainActivity mainActivity);
 
-    void inject(MainPresenter mainPresenter);
-
+    void inject(MainInteractor mainInteractor);
 }
