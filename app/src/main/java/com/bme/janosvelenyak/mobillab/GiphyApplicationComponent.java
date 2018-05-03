@@ -1,6 +1,8 @@
 package com.bme.janosvelenyak.mobillab;
 
 import com.bme.janosvelenyak.mobillab.interactor.InteractorModule;
+import com.bme.janosvelenyak.mobillab.interactor.details.DetailsInteractor;
+import com.bme.janosvelenyak.mobillab.interactor.favourites.FavouritesInteractor;
 import com.bme.janosvelenyak.mobillab.interactor.main.MainInteractor;
 import com.bme.janosvelenyak.mobillab.network.NetworkModule;
 import com.bme.janosvelenyak.mobillab.ui.UIModule;
@@ -22,4 +24,8 @@ public interface GiphyApplicationComponent {
     void inject(MainActivity mainActivity);
 
     void inject(MainInteractor mainInteractor);
+
+    void inject(DetailsInteractor detailsInteractor);
+
+    void inject(FavouritesInteractor favouritesInteractor);
 }
