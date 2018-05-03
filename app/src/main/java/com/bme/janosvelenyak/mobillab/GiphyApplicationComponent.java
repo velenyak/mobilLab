@@ -4,6 +4,7 @@ import com.bme.janosvelenyak.mobillab.interactor.InteractorModule;
 import com.bme.janosvelenyak.mobillab.network.NetworkModule;
 import com.bme.janosvelenyak.mobillab.ui.UIModule;
 import com.bme.janosvelenyak.mobillab.ui.main.MainActivity;
+import com.bme.janosvelenyak.mobillab.ui.main.MainPresenter;
 
 import javax.inject.Singleton;
 
@@ -18,5 +19,7 @@ import dagger.Component;
         InteractorModule.class})
 public interface GiphyApplicationComponent {
     void inject(MainActivity mainActivity);
+
+    void inject(MainPresenter mainPresenter);
 
 }
