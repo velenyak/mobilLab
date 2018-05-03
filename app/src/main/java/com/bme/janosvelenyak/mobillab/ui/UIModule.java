@@ -2,6 +2,8 @@ package com.bme.janosvelenyak.mobillab.ui;
 
 import android.content.Context;
 
+import com.bme.janosvelenyak.mobillab.ui.details.DetailsPresenter;
+import com.bme.janosvelenyak.mobillab.ui.favourites.FavouritesPresenter;
 import com.bme.janosvelenyak.mobillab.ui.main.MainPresenter;
 
 import javax.inject.Singleton;
@@ -30,5 +32,17 @@ public class UIModule {
     @Singleton
     public MainPresenter provideMainPresenter() {
         return new MainPresenter();
+    }
+
+    @Provides
+    @Singleton
+    public FavouritesPresenter provideFavouritesPresenter() {
+        return new FavouritesPresenter();
+    }
+
+    @Provides
+    @Singleton
+    public DetailsPresenter provideDetailsPresenter() {
+        return new DetailsPresenter();
     }
 }

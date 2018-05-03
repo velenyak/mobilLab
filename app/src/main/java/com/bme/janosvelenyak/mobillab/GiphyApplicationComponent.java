@@ -6,6 +6,8 @@ import com.bme.janosvelenyak.mobillab.interactor.favourites.FavouritesInteractor
 import com.bme.janosvelenyak.mobillab.interactor.main.MainInteractor;
 import com.bme.janosvelenyak.mobillab.network.NetworkModule;
 import com.bme.janosvelenyak.mobillab.ui.UIModule;
+import com.bme.janosvelenyak.mobillab.ui.details.DetailsActivity;
+import com.bme.janosvelenyak.mobillab.ui.favourites.FavouritesActivity;
 import com.bme.janosvelenyak.mobillab.ui.main.MainActivity;
 import com.bme.janosvelenyak.mobillab.ui.main.MainPresenter;
 
@@ -21,11 +23,14 @@ import dagger.Component;
 @Component(modules = {UIModule.class, NetworkModule.class,
         InteractorModule.class})
 public interface GiphyApplicationComponent {
-    void inject(MainActivity mainActivity);
 
+    void inject(MainActivity mainActivity);
     void inject(MainInteractor mainInteractor);
 
     void inject(DetailsInteractor detailsInteractor);
+    void inject(DetailsActivity detailsActivity);
 
     void inject(FavouritesInteractor favouritesInteractor);
+    void inject(FavouritesActivity favouritesActivity);
+
 }
