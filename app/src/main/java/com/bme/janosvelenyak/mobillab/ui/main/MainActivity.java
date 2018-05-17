@@ -26,26 +26,26 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
     @BindString(R.string.app_name) String test = "TEST";
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
 
         GiphyApplication.injector.inject(this);
-        mainPresenter.attachScreen(this);
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        mainPresenter.attachScreen(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-//        mainPresenter.detachScreen();
+        mainPresenter.detachScreen();
     }
 
     @OnClick(R.id.testBtn)
