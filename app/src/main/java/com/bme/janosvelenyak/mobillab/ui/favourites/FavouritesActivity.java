@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bme.janosvelenyak.mobillab.GiphyApplication;
 import com.bme.janosvelenyak.mobillab.R;
+import com.bme.janosvelenyak.mobillab.model.InlineResponse200Data;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -20,11 +23,16 @@ public class FavouritesActivity extends AppCompatActivity implements FavouritesS
     FavouritesPresenter presenter;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
 
         GiphyApplication.injector.inject(this);
         presenter.attachScreen(this);
+    }
+
+    @Override
+    public void showGifs(List<InlineResponse200Data> gifs) {
+
     }
 }

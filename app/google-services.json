@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "122284255614",
+    "firebase_url": "https://mobillab-e27af.firebaseio.com",
+    "project_id": "mobillab-e27af",
+    "storage_bucket": "mobillab-e27af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122284255614:android:fa4f9a9b831b9f44",
+        "android_client_info": {
+          "package_name": "com.bme.janosvelenyak.mobillab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122284255614-8pt7qlf80bb47mjp8sc1v59u9h9rcsak.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "122284255614-8pt7qlf80bb47mjp8sc1v59u9h9rcsak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9MD9dO_x720F2W2DdBzI1jAqprMNtVKk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

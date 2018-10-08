@@ -1,5 +1,7 @@
 package com.bme.janosvelenyak.mobillab.network;
 
+import com.bme.janosvelenyak.mobillab.api.GifsApi;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -15,15 +17,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NetworkModule {
     @Provides
     @Singleton
-    public Retrofit.Builder provideRetrofit() {
+    public Retrofit provideRetrofit() {
         return new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create());
+                .baseUrl(NetworkConfig.ENDPOINT_ADDRESS)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
     }
 
     @Provides
     @Singleton
-    public GiphyApi provideArtistsApi(Retrofit.Builder retrofitBuilder) {
-        return retrofitBuilder.baseUrl(NetworkConfig.ENDPOINT_ADDRESS).build().create(GiphyApi.class);
+    public GifsApi provideGifsApi(Retrofit retrofitBuilder) {
+        return retrofitBuilder.create(GifsApi.class);
     }
 }
